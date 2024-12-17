@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Anton&display=swap" rel="stylesheet">
+    <style>
+        /* Container Styling */
+        body {
+            margin: 0;
+            background: transparent; /* Fully transparent background */
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .gatewayContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Gateway Card Styling */
+        .gatewayCard {
+            flex: 1 1 calc(18% - 20px);
+            text-align: center;
+            padding: 20px 15px;
+            border-radius: 15px;
+            border: 2px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gatewayCard:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Titles */
+        .gatewayCard h2 {
+            font-size: 30px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .gatewayCard h3 {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0 0 10px;
+        }
+
+        /* Divider */
+        .divider {
+            width: 80%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 10px auto;
+        }
+
+        /* Points and Price */
+        .points {
+            font-size: 80px;
+            margin: 10px 0 5px;
+            line-height: 1;
+        }
+
+        .pointsText {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .price {
+            font-size: 35px;
+            margin: 5px 0;
+        }
+
+        .subText {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            text-transform: uppercase;
+        }
+
+        /* Button Styling */
+        .gatewayCard a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-family: 'Anton', sans-serif;
+            font-style: italic;
+            text-transform: uppercase;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: transparent;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .gatewayCard a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Gateway Card Colors */
+        .gatewayCard.basic {
+            background: linear-gradient(135deg, #e0e0e0, #b8b8b8);
+        }
+
+        .gatewayCard.bronze {
+            background: linear-gradient(135deg, #d97848, #cc5c1f);
+        }
+
+        .gatewayCard.gold {
+            background: linear-gradient(135deg, #f4d03f, #eaae17);
+        }
+
+        .gatewayCard.elite {
+            background: linear-gradient(135deg, #b085d4, #8c5fc2);
+        }
+
+        .gatewayCard.premium {
+            background: linear-gradient(135deg, #5e98f3, #345ddc);
+        }
+
+        /* Responsive Design for 3 Cards on Mobile */
+        @media (max-width: 768px) {
+            .gatewayCard {
+                flex: 1 1 calc(33.33% - 20px);
+            }
+            .points {
+                font-size: 50px;
+            }
+            .pointsText {
+                font-size: 18px;
+            }
+            .price {
+                font-size: 24px;
+            }
+            .gatewayCard a {
+                font-size: 14px;
+                padding: 8px 12px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gatewayContainer">
+        <!-- Basic Gateway -->
+        <div class="gatewayCard basic">
+            <h2>BASIC</h2>
+            <h3>GATEWAY</h3>
+            <div class="divider"></div>
+            <p class="points">1</p>
+            <p class="pointsText">POINT</p>
+            <div class="divider"></div>
+            <p class="price">$10</p>
+            <p class="subText">ONE-TIME PAYMENT</p>
+            <a href="#open-popup" id="button-basic">SELECT</a>
+        </div>
+
+        <!-- Bronze Gateway -->
+        <div class="gatewayCard bronze">
+            <h2>BRONZE</h2>
+            <h3>GATEWAY</h3>
+            <div class="divider"></div>
+            <p class="points">10</p>
+            <p class="pointsText">POINTS</p>
+            <div class="divider"></div>
+            <p class="price">$30</p>
+            <p class="subText">ONE-TIME PAYMENT</p>
+            <a href="#open-popup" id="button-bronze">SELECT</a>
+        </div>
+
+        <!-- Gold Gateway -->
+        <div class="gatewayCard gold">
+            <h2>GOLD</h2>
+            <h3>GATEWAY</h3>
+            <div class="divider"></div>
+            <p class="points">50</p>
+            <p class="pointsText">POINTS</p>
+            <div class="divider"></div>
+            <p class="price">$100</p>
+            <p class="subText">ONE-TIME PAYMENT</p>
+            <a href="#open-popup" id="button-gold">SELECT</a>
+        </div>
+
+        <!-- Elite Gateway -->
+        <div class="gatewayCard elite">
+            <h2>ELITE</h2>
+            <h3>GATEWAY</h3>
+            <div class="divider"></div>
+            <p class="points">200</p>
+            <p class="pointsText">POINTS</p>
+            <div class="divider"></div>
+            <p class="price">$250</p>
+            <p class="subText">ONE-TIME PAYMENT</p>
+            <a href="#open-popup" id="button-elite">SELECT</a>
+        </div>
+
+        <!-- Premium Gateway -->
+        <div class="gatewayCard premium">
+            <h2>PREMIUM</h2>
+            <h3>GATEWAY</h3>
+            <div class="divider"></div>
+            <p class="points">500</p>
+            <p class="pointsText">POINTS</p>
+            <div class="divider"></div>
+            <p class="price">$500</p>
+            <p class="subText">ONE-TIME PAYMENT</p>
+            <a href="#open-popup" id="button-premium">SELECT</a>
+        </div>
+    </div>
+
+    <!-- JavaScript for Button Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttonMappings = {
+                'button-basic': 'https://mathewshabo.clickfunnels.com/basic-gateway',
+                'button-bronze': 'https://mathewshabo.clickfunnels.com/bronze-gateway',
+                'button-gold': 'https://mathewshabo.clickfunnels.com/gold-gateway',
+                'button-elite': 'https://mathewshabo.clickfunnels.com/elite-gateway',
+                'button-premium': 'https://mathewshabo.clickfunnels.com/premium-gateway'
+            };
+
+            Object.keys(buttonMappings).forEach(buttonId => {
+                const button = document.getElementById(buttonId);
+                if (button) {
+                    button.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.open(buttonMappings[buttonId], '_blank');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
